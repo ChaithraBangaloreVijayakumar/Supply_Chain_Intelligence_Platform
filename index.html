@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply Chain 360 Analytics Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 20px;
+        }
+        .dashboard-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .dashboard-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Supply Chain 360 Analytics</h1>
+            <p>Late Delivery Risk Prediction & Performance Dashboard</p>
+        </div>
+        
+        <div class="content">
+            <div class="dashboard-container">
+                <!-- REPLACE THE src= URL BELOW WITH YOUR POWER BI EMBED CODE URL -->
+                <iframe title="Late Delivery Risk"
+                        src="https://app.fabric.microsoft.com/reportEmbed?reportId=28fba97c-80e3-458b-8bd1-0676a5768dba&autoAuth=true&ctid=a50115c9-6c24-430b-88af-fc09975dbd78"
+                        allowFullScreen="true">
+                </iframe>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Supply Chain Intelligence Platform</strong></p>
+            <p>Built with Microsoft Fabric (PySpark ETL), LightGBM ML model, and Power BI</p>
+            <p><a href="https://github.com/yourname/supply-chain-analytics" target="_blank">View Code & Documentation on GitHub →</a></p>
+        </div>
+    </div>
+</body>
+</html>
