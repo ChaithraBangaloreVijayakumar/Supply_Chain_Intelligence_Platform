@@ -39,39 +39,88 @@
             opacity: 0.9;
         }
         .content {
-            padding: 20px;
+            padding: 40px;
         }
-        .dashboard-container {
-            position: relative;
+        .dashboard-section {
+            margin-bottom: 60px;
+        }
+        .dashboard-section h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .dashboard-section p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .dashboard-section img {
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
-        .dashboard-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+        .dashboard-section img:hover {
+            transform: scale(1.01);
+        }
+        .page-nav {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        .page-nav h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .page-nav ul {
+            list-style: none;
+            columns: 2;
+            gap: 20px;
+        }
+        .page-nav li {
+            margin-bottom: 10px;
+        }
+        .page-nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .page-nav a:hover {
+            text-decoration: underline;
         }
         .footer {
             background: #f5f5f5;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
-            font-size: 0.9em;
             color: #666;
             border-top: 1px solid #ddd;
+        }
+        .footer h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .footer p {
+            margin: 8px 0;
+            line-height: 1.6;
         }
         .footer a {
             color: #667eea;
             text-decoration: none;
+            font-weight: 600;
         }
         .footer a:hover {
             text-decoration: underline;
+        }
+        .tech-stack {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
         }
     </style>
 </head>
@@ -83,19 +132,120 @@
         </div>
         
         <div class="content">
-            <div class="dashboard-container">
-                <!-- REPLACE THE src= URL BELOW WITH YOUR POWER BI EMBED CODE URL -->
-                <iframe title="Late Delivery Risk"
-                        src="https://app.fabric.microsoft.com/reportEmbed?reportId=28fba97c-80e3-458b-8bd1-0676a5768dba&autoAuth=true&ctid=a50115c9-6c24-430b-88af-fc09975dbd78"
-                        allowFullScreen="true">
-                </iframe>
+            
+            <div class="page-nav">
+                <h3>📑 Dashboard Pages</h3>
+                <ul>
+                    <li><a href="#executive">1. Executive Business Overview</a></li>
+                    <li><a href="#findings1">2. Findings Sheet 1</a></li>
+                    <li><a href="#findings2">3. Findings Sheet 2</a></li>
+                    <li><a href="#delivery">4. Delivery & Fulfillment Performance</a></li>
+                    <li><a href="#sales">5. Sales Performance</a></li>
+                    <li><a href="#geography">6. Geography & Market Report</a></li>
+                    <li><a href="#anomaly">7. Anomaly Detection</a></li>
+                    <li><a href="#influencers1">8. Key Influencers 1</a></li>
+                    <li><a href="#influencers2">9. Key Influencers 2</a></li>
+                    <li><a href="#decomposition">10. Decomposition Tree</a></li>
+                    <li><a href="#ml">11. Late Delivery Risk ML Flow</a></li>
+                </ul>
             </div>
+
+            <div class="dashboard-section" id="executive">
+                <h2>1. Executive Business Overview</h2>
+                <p>High-level view of supply chain operations across all key metrics, markets, and product categories. Provides context for deeper analysis.</p>
+                <img src="images/1_executive_business_overview.png" alt="Executive Overview">
+            </div>
+
+            <div class="dashboard-section" id="findings1">
+                <h2>2. Findings Sheet 1</h2>
+                <p>Key insights and patterns identified from initial analysis of supply chain performance data.</p>
+                <img src="images/2_findings_sheet_1.png" alt="Findings Sheet 1">
+            </div>
+
+            <div class="dashboard-section" id="findings2">
+                <h2>3. Findings Sheet 2</h2>
+                <p>Additional findings and deeper insights into operational patterns and opportunities.</p>
+                <img src="images/3_findings_sheet_2.png" alt="Findings Sheet 2">
+            </div>
+
+            <div class="dashboard-section" id="delivery">
+                <h2>4. Delivery & Fulfillment Performance Report</h2>
+                <p>Detailed metrics on delivery performance, fulfillment status, and on-time delivery rates across shipping modes and regions.</p>
+                <img src="images/4_delivery_and_fulfillment_performance_report.png" alt="Delivery Performance">
+            </div>
+
+            <div class="dashboard-section" id="sales">
+                <h2>5. Sales Performance Report</h2>
+                <p>Sales trends, revenue analysis, and performance metrics by product category, market, and time period.</p>
+                <img src="images/5_sales_performance_report.png" alt="Sales Performance">
+            </div>
+
+            <div class="dashboard-section" id="geography">
+                <h2>6. Geography & Market Report</h2>
+                <p>Geographic segmentation of supply chain metrics, market-level performance, and regional delivery patterns.</p>
+                <img src="images/6_geography_and_market_report.png" alt="Geography & Market">
+            </div>
+
+            <div class="dashboard-section" id="anomaly">
+                <h2>7. Anomaly Detection</h2>
+                <p>AI-powered anomaly detection identifying unusual patterns and outliers in supply chain operations. Highlights potential risks and opportunities.</p>
+                <img src="images/7_anomaly_detection.png" alt="Anomaly Detection">
+            </div>
+
+            <div class="dashboard-section" id="influencers1">
+                <h2>8. Key Influencers 1</h2>
+                <p>Analysis of primary factors and influencers driving late deliveries and performance variation. AI-driven insights into root causes.</p>
+                <img src="images/8_key_influencers_1.png" alt="Key Influencers 1">
+            </div>
+
+            <div class="dashboard-section" id="influencers2">
+                <h2>9. Key Influencers 2</h2>
+                <p>Secondary influencers and contributing factors to supply chain outcomes. Detailed breakdown of categorical effects.</p>
+                <img src="images/9_key_influencers_2.png" alt="Key Influencers 2">
+            </div>
+
+            <div class="dashboard-section" id="decomposition">
+                <h2>10. Decomposition Tree</h2>
+                <p>Interactive decomposition analysis of late delivery risk, breaking down by market, shipping mode, product category, and customer segment.</p>
+                <img src="images/10_decomposition_tree.png" alt="Decomposition Tree">
+            </div>
+
+            <div class="dashboard-section" id="ml">
+                <h2>11. Late Delivery Risk ML Flow</h2>
+                <p>
+                    <strong>Core ML Analytics Page:</strong> Late-delivery risk prediction model (LightGBM, AUC 0.77) with risk scores, feature importance, 
+                    model performance metrics (confusion matrix, precision/recall), calibration curves, and drill-through to order-level detail. 
+                    Risk distribution histogram, predicted vs actual late rates by market/shipping mode, and out-of-time holdout validation metrics.
+                </p>
+                <img src="images/11_late_delivery_risk_ml_flow.png" alt="Late Delivery Risk ML Flow">
+            </div>
+
         </div>
         
         <div class="footer">
-            <p><strong>Supply Chain Intelligence Platform</strong></p>
-            <p>Built with Microsoft Fabric (PySpark ETL), LightGBM ML model, and Power BI</p>
-            <p><a href="https://github.com/yourname/supply-chain-analytics" target="_blank">View Code & Documentation on GitHub →</a></p>
+            <h3>Supply Chain Intelligence Platform</h3>
+            
+            <div class="tech-stack">
+                <strong>Technology Stack:</strong><br>
+                Microsoft Fabric (Lakehouse, Warehouse, PySpark) · Delta Lake · LightGBM · MLflow · Power BI · DAX
+            </div>
+
+            <p>
+                <strong>Architecture:</strong> End-to-end medallion ETL pipeline (bronze/silver/gold) in Microsoft Fabric processing 180K+ order items 
+                into a 7-dimensional star schema. Late-delivery risk prediction model trained on order-time features only (no leakage) with out-of-time 
+                holdout validation (AUC 0.77, Precision 83%, Recall 60%). Multi-page Power BI dashboard with 30+ DAX measures, risk scoring, model calibration, 
+                KPI analysis, anomaly detection, decomposition trees, key influencer analysis, and drill-through order detail.
+            </p>
+
+            <p style="margin-top: 20px; font-size: 0.95em; color: #999;">
+                <strong>Note:</strong> This portfolio displays static dashboard previews. Live interactive dashboard available to organization members in Power BI Service.
+            </p>
+
+            <p style="margin-top: 20px;">
+                <a href="https://github.com/yourname/supply-chain-analytics" target="_blank">
+                    → View Code, Notebooks & Full Documentation on GitHub
+                </a>
+            </p>
         </div>
     </div>
 </body>
